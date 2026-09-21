@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALAK</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-cyan">
+
+    <canvas id="cyber-canvas"></canvas>
+
+    <div id="intro-screen">
+        <canvas id="intro-stars-canvas"></canvas>
+        <div class="intro-mouse-glow" id="intro-mouse-glow"></div>
+        <div class="crt-scanlines"></div>
+        <div class="crt-vignette"></div>
+
+        <div class="arcade-intro-wrapper">
+            <div class="arcade-top-hud">
+                <span id="arcade-credits">🪙 CREDITS: 03</span>
+                <span class="hud-status-blip" id="hud-status-blip">● SCANNING</span>
+                <span id="arcade-battery">🔋 UNLIMITED</span>
+            </div>
+
+            <div class="arcade-header-box">
+                <span class="arcade-sub-tag">★ SYSTEM INITIALIZED FOR ★</span>
+
+                <div class="glitch-emblem" id="glitch-emblem">
+                    <svg class="glitch-ring-svg" viewBox="0 0 200 200" aria-hidden="true">
+                        <circle class="ring-track" cx="100" cy="100" r="86"></circle>
+                        <circle class="ring-glow" cx="100" cy="100" r="86"></circle>
+                    </svg>
+
+                    <span class="glitch-chip c1"></span>
+                    <span class="glitch-chip c2"></span>
+                    <span class="glitch-chip c3"></span>
+                    <span class="glitch-chip c4"></span>
+                    <span class="glitch-chip c5"></span>
+                    <span class="glitch-chip c6"></span>
+                    <span class="glitch-chip c7"></span>
+                    <span class="glitch-chip c8"></span>
+                    <span class="glitch-chip c9"></span>
+                    <span class="glitch-chip c10"></span>
+
+                    <span class="glitch-emblem-name" data-text="MALAK">MALAK</span>
+                </div>
+
+                <span class="id-scan-label" id="id-scan-label">SCANNING IDENTITY...</span>
+            </div>
+
+            <div class="arcade-stars-row">
+                <span class="pixel-star">✦</span>
+                <span class="pixel-star center-star">✦</span>
+                <span class="pixel-star">✦</span>
+            </div>
+
+            <div class="arcade-buttons-row">
+                <div class="arcade-circular-btn" data-action="enter-system">
+                    <span class="btn-pixel-icon">⚡</span>
+                    <span class="circle-btn-text">ENTER SYSTEM</span>
+                </div>
+            </div>
+
+            <div class="arcade-footer-box">
+                <div class="arcade-logo-badge" id="arcade-logo-text">MALAK_SYSTEM v2.6</div>
+                <div class="arcade-progress-shell-large">
+                    <div class="arcade-progress-bar-large" id="intro-bar"></div>
+                </div>
+                <span class="arcade-loading-text" id="intro-percent">LOADING... 0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة الشطرنج التفاعلية المنبثقة -->
+    <div id="chess-modal" class="chess-modal-overlay hidden">
+        <div class="chess-modal-box">
+            <div class="chess-header">
+                <span>♟ CHESS// VS BOT (broken chess) </span>
+                <button class="close-chess-btn" data-action="close-chess">✕</button>
+            </div>
+            <div id="chess-board" class="chess-board-grid"></div>
+            <div class="chess-controls">
+                <span id="chess-status" class="chess-status-text">PRESS PLAY TO START</span>
+                <button class="chess-play-btn" data-action="start-chess">PLAY</button>
+            </div>
+        </div>
+    </div>
+
+    <main id="app-container">
+        <header class="cyber-header">
+            <div class="brand-system" data-action="return-home" role="button" tabindex="0" title="Back to hub">
+                <span class="live-dot"></span>
+                <span>MALAK.SYS // 2026</span>
+            </div>
+
+            <nav class="main-nav" aria-label="Primary navigation">
+                <button class="nav-link" data-section="about">ABOUT</button>
+                <button class="nav-link" data-section="contacts">CONTACTS</button>
+                <button class="nav-link" data-section="message">MESSAGE</button>
+            </nav>
+
+            <div class="header-controls">
+                <button class="theme-switch-btn" data-action="open-chess" title="Play Chess">
+                    <span class="theme-icon">♟</span> CHESS
+                </button>
+                <button class="theme-switch-btn" data-action="toggle-theme" title="Change Color Theme">
+                    <span class="theme-icon">🎨</span> THEME
+                </button>
+                <div class="persistent-id-card">
+                    <span>GRADE 11</span> • <span class="highlight-yellow">BORN: 24 JUNE</span>
+                </div>
+            </div>
+        </header>
+
+        <div id="gateway-hub" class="hub-wrapper">
+            <div class="hub-hero">
+                <h1>WELCOME TO MY UNIVERSE</h1>
+                <p>Explore my complete archive, connect via secure channels, or transmit a direct message.</p>
+            </div>
+            <div class="hub-grid">
+                <div class="cyber-card" data-section="about" role="button" tabindex="0">
+                    <div class="card-glow-bg"></div>
+                    <div class="cyber-icon-badge alien-badge">
+                        <div class="badge-core"></div>
+                    </div>
+                    <h3>ABOUT ME</h3>
+                    <p>Who I am, my core interests, artistic expressions, and future learning goals.</p>
+                </div>
+                <div class="cyber-card" data-section="contacts" role="button" tabindex="0">
+                    <div class="card-glow-bg"></div>
+                    <div class="cyber-icon-badge ufo-badge">
+                        <div class="ufo-dome"></div>
+                        <div class="ufo-base"></div>
+                    </div>
+                    <h3>CONTACTS</h3>
+                    <p>Official links, social networks, and digital touchpoints.</p>
+                </div>
+                <div class="cyber-card accent-card" data-section="message" role="button" tabindex="0">
+                    <div class="card-glow-bg"></div>
+                    <div class="cyber-icon-badge rocket-badge">
+                        <div class="rocket-body"></div>
+                    </div>
+                    <h3>SEND A MESSAGE</h3>
+                    <p>Direct communication channel via Formspree transmission.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="viewport-deck" class="deck-wrapper hidden">
+            <div class="deck-nav-bar">
+                <button class="back-home-btn" data-action="return-home">← RETURN TO HUB</button>
+                <span class="deck-title-tag" id="deck-title">SECTION</span>
+            </div>
+
+            <!-- SECTION 1: ABOUT -->
+            <div class="content-panel" id="panel-about">
+                <div class="cyber-glass-box">
+                    <div class="panel-inner-scroll custom-scrollbar">
+                        
+                        <div class="about-subnav">
+                            <button class="subnav-btn active" data-tab="bio">1. WHO I AM</button>
+                            <button class="subnav-btn" data-tab="interests">2. INTERESTS</button>
+                            <button class="subnav-btn" data-tab="future">3. FUTURE GOALS</button>
+                        </div>
+
+                        <div class="about-subcontent active" id="about-bio">
+                            <h2 class="section-heading">WHO I <span class="highlight-blue">AM</span></h2>
+
+                            <div class="quick-facts-row">
+                                <div class="quick-fact-chip">
+                                    <span class="qf-label">GRADE</span>
+                                    <span class="qf-value highlight-purple">11</span>
+                                </div>
+                                <div class="quick-fact-chip">
+                                    <span class="qf-label">BORN</span>
+                                    <span class="qf-value highlight-yellow">JUNE 24</span>
+                                </div>
+                                <div class="quick-fact-chip">
+                                    <span class="qf-label">LOCATION</span>
+                                    <span class="qf-value highlight-blue">KAFR EL-SHEIKH, EG</span>
+                                </div>
+                            </div>
+
+                            <p class="formal-bio-text">
+                                I am <strong class="highlight-yellow">Malak</strong>, a student in <strong class="highlight-purple">Grade 11</strong>
+                                 born on <strong class="highlight-yellow">June 24th</strong> from <strong class="highlight-blue">Kafr El-Sheikh,
+                                     Egypt</strong>. I am a curious person who loves learning <strong class="highlight-yellow">new things</strong>,
+                                      explore my inner potential, and see what I am truly capable of achieving.
+                            </p>
+                            <p class="formal-bio-text">
+                                To be honest, I am not the most social person or great at small talk with people, which is actually why I prefer spending my time diving deep into learning new skills and building things independently.
+                            </p>
+                            
+                            <div class="canvas-container-box">
+                                <span class="frame-label">HOLO_NODE // LIVE_ANIMATION</span>
+                                <canvas id="interactive-creature-canvas" width="220" height="150"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="about-subcontent" id="about-interests">
+                            <h2 class="section-heading">MY <span class="highlight-yellow">INTERESTS</span></h2>
+                            <div class="interests-grid-modern">
+                                <div class="interest-item-box">
+                                    <span class="i-icon">♟</span>
+                                    <h4>CHESS</h4>
+                                    <p>I love analyzing the board, thinking several <strong class="highlight-blue">steps ahead</strong>, and making calculated, deep moves.</p>
+                                </div>
+                                <div class="interest-item-box">
+                                    <span class="i-icon">💻</span>
+                                    <h4>CODING</h4>
+                                    <p>To me, coding feels like <strong class="highlight-yellow">magic</strong>—it’s not just lines of text, it's creating logic and life from scratch.</p>
+                                </div>
+                                <div class="interest-item-box">
+                                    <span class="i-icon">🎨</span>
+                                    <h4>ART & LANGUAGES</h4>
+                                    <p>Art was the very first thing I discovered about myself through sketching. I also love <strong class="highlight-purple">digital art</strong>, which I've been developing for a while.</p>
+                                </div>
+                                <div class="interest-item-box">
+                                    <span class="i-icon">🎧</span>
+                                    <h4>MUSIC</h4>
+                                    <p>Music calms my mind. My taste is quite eclectic, and I listen to various tracks depending on my <strong class="highlight-blue">current mood</strong>.</p>
+                                </div>
+                                <div class="interest-item-box">
+                                    <span class="i-icon">🐾</span>
+                                    <h4>ANIMALS</h4>
+                                    <p>I deeply adore animals because they are gentle, peaceful creatures, and I love being surrounded by their <strong class="highlight-yellow">tranquility</strong>.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-subcontent" id="about-future">
+                            <h2 class="section-heading">FUTURE <span class="highlight-purple">HORIZONS</span></h2>
+                            <p class="formal-bio-text">Things I intend to learn and master in upcoming cycles:</p>
+                            
+                            <div class="future-list-stack">
+                                <div class="future-row">
+                                    <span class="f-num">01</span>
+                                    <div class="f-content">
+                                        <h4>PLAYING INSTRUMENTS</h4>
+                                        <p>Mastering the <strong class="highlight-yellow">Guitar</strong>, <strong class="highlight-blue">Piano</strong>, and <strong class="highlight-purple">Harmonica</strong>.</p>
+                                    </div>
+                                </div>
+                                <div class="future-row">
+                                    <span class="f-num">02</span>
+                                    <div class="f-content">
+                                        <h4>SCULPTING</h4>
+                                        <p>Exploring physical form, tactile texture, and dimensional crafting.</p>
+                                    </div>
+                                </div>
+                                <div class="future-row">
+                                    <span class="f-num">03</span>
+                                    <div class="f-content">
+                                        <h4>SOCIAL SKILLS</h4>
+                                        <p>How to socialize more <span class="highlight-yellow">cuz it's really embarrassing!</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: CONTACTS -->
+            <div class="content-panel" id="panel-contacts">
+                <div class="cyber-glass-box">
+                    <div class="panel-inner-scroll custom-scrollbar">
+                        <h2 class="section-heading">CONTACT <span class="highlight-blue">CHANNELS</span></h2>
+                        <p class="formal-bio-text">Connect across secure external networks:</p>
+                        
+                        <div class="contacts-grid">
+                            <a href="https://www.chess.com/member/malakabdelmenam" target="_blank" class="contact-link-card">
+                                <span class="c-icon">♟</span>
+                                <div>
+                                    <h4>Chess.com Profile</h4>
+                                </div>
+                            </a>
+                            <a href="https://github.com/malachioro" target="_blank" class="contact-link-card">
+                                <span class="c-icon">⚡</span>
+                                <div>
+                                    <h4>GitHub Repository</h4>
+                                    <p>malachioro</p>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/malakv27x?stkn=YXlpNHpsMTY5ejln" target="_blank" class="contact-link-card">
+                                <span class="c-icon">📸</span>
+                                <div>
+                                    <h4>Instagram Network</h4>
+                                    <p>malakv27x</p>
+                                </div>
+                            </a>
+                            <a href="https://www.facebook.com/share/1Jvy95iwro/" target="_blank" class="contact-link-card">
+                                <span class="c-icon">🌐</span>
+                                <div>
+                                    <h4>Facebook Profile</h4>
+                                    <p>Malak Sadek</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: SEND A MESSAGE -->
+            <div class="content-panel" id="panel-message">
+                <div class="cyber-glass-box">
+                    <div class="panel-inner-scroll custom-scrollbar">
+                        <h2 class="section-heading">TRANSMIT <span class="highlight-yellow">MESSAGE</span></h2>
+                        <p class="formal-bio-text">Send me a note</p>
+                        
+                        <form id="formspree-transmission-form" action="https://formspree.io/f/moevjjog" method="POST" class="cyber-form">
+                            <div class="form-group">
+                                <input type="text" name="name" id="msg-name" placeholder="Enter your name..." required />
+                            </div>
+                            <div class="form-group">
+                                <label>WHAT IS ON YOUR MIND</label>
+                                <textarea name="message" id="msg-content" rows="4" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="cyber-submit-btn">SEND TRANSMISSION</button>
+                        </form>
+
+                        <div id="form-success-msg" class="hidden success-box">
+                            MESSAGE SENT SUCCESSFULLY ✓
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
