@@ -676,7 +676,7 @@ drawInteractiveEntity();
 /* ======================= INTRO: GLITCH ALERT SEQUENCE ======================= */
 // إنترو ترحيبي هادئ يجهّز التجربة ويستجيب للنقر وحركة المؤشر.
 
-const ALERT_DURATION_MS = 4700;
+const ALERT_DURATION_MS = 5200;
 const DISMISS_DELAY_MS = 600;
 const INTRO_SPAM_MESSAGES = [
     'A little space, made just for me.',

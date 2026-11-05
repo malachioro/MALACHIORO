@@ -2099,7 +2099,7 @@ body::before {
     border-radius: inherit;
     background: linear-gradient(90deg, #a52a50, #e097ae 52%, #e4bd67);
     box-shadow: 0 0 14px rgba(228, 189, 103, 0.35);
-    animation: introLoad 4.7s ease-out forwards;
+    animation: introLoad 5.2s ease-out forwards;
     position: relative;
 }
 .intro-progress-fill::after {
@@ -6450,5 +6450,57 @@ body.welcome-focus-mode .welcome-card::after {
 @media (min-width: 861px) {
     #app-container:has(#viewport-deck:not(.hidden)) .deck-nav-bar {
         padding-inline-end: clamp(110px, 12vw, 150px);
+    }
+}
+
+@media (max-width: 560px) {
+    #intro-screen .intro-shell {
+        width: calc(100vw - 36px);
+        padding: 16px 14px;
+        border-radius: 20px;
+    }
+
+    #intro-screen .intro-showcase {
+        gap: 11px;
+        padding: 14px 0 12px;
+    }
+
+    #intro-screen .intro-identity { padding: 2px 0 0; }
+    #intro-screen .intro-kicker { margin-bottom: 10px; }
+    #intro-screen .glitch-emblem-name {
+        font-size: clamp(38px, 12vw, 52px);
+        letter-spacing: clamp(4px, 1vw, 8px);
+    }
+    #intro-screen .intro-tagline { margin-top: 14px; }
+    #intro-screen .intro-copy-note { margin-top: 12px; font-size: 12px; line-height: 1.65; }
+    #intro-screen .intro-art-card { min-height: 106px; border-radius: 14px; }
+    #intro-screen .intro-art-index { top: 10px; left: 10px; font-size: 7px; }
+    #intro-screen .intro-art-caption { bottom: 10px; }
+    #intro-screen .intro-orb { width: 48px; }
+    #intro-screen .intro-terminal { padding: 11px 10px 10px; }
+    #intro-screen .intro-spam-console {
+        min-height: 72px;
+        max-height: 82px;
+        padding: 8px 0 6px;
+    }
+
+    .sidebar-icon,
+    .theme-icon { font-size: 13px; }
+
+    .interest-item-box .i-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+
+    .contact-link-card .c-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .contact-link-card .c-icon svg {
+        width: 20px;
+        height: 20px;
     }
 }
