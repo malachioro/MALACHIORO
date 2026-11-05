@@ -5286,7 +5286,7 @@ background:
 }
 
 @media (min-width: 861px) {
-    #app-container:has(#gateway-hub:not(.hidden)) {
+    #app-container:has(#gateway-hub) {
         position: relative;
         display: flex;
         flex-direction: row;
@@ -5295,7 +5295,7 @@ background:
         overflow: hidden;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .sidebar-nav {
+    #app-container:has(#gateway-hub) .sidebar-nav {
         position: relative;
         display: flex;
         width: 230px;
@@ -5307,11 +5307,11 @@ background:
         padding: 24px 16px;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .sidebar-nav::before {
+    #app-container:has(#gateway-hub) .sidebar-nav::before {
         content: "✦";
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .app-main {
+    #app-container:has(#gateway-hub) .app-main {
         position: relative;
         z-index: auto;
         min-width: 0;
@@ -5320,7 +5320,7 @@ background:
         overflow: hidden;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .hub-wrapper {
+    #app-container:has(#gateway-hub) .hub-wrapper {
         position: relative;
         isolation: isolate;
         min-height: 0;
@@ -5328,18 +5328,18 @@ background:
         padding: 28px;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .hub-wrapper::before {
+    #app-container:has(#gateway-hub) .hub-wrapper::before {
         content: none;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .sidebar-brand {
+    #app-container:has(#gateway-hub) .sidebar-brand {
         position: relative;
         width: auto;
         max-width: none;
         margin: 4px 0 22px;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .sidebar-links .sidebar-link {
+    #app-container:has(#gateway-hub) .sidebar-links .sidebar-link {
         position: relative;
         width: 100%;
         min-height: 0;
@@ -5349,7 +5349,7 @@ background:
         transform: none;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .sidebar-clock {
+    #app-container:has(#gateway-hub) .sidebar-clock {
         position: static;
         z-index: auto;
         display: flex;
@@ -5362,12 +5362,12 @@ background:
         gap: 8px;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .cat-clock-frame {
+    #app-container:has(#gateway-hub) .cat-clock-frame {
         display: block;
         width: 126px;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .sidebar-footer {
+    #app-container:has(#gateway-hub) .sidebar-footer {
         position: static;
         z-index: auto;
         width: 100%;
@@ -5386,7 +5386,7 @@ background:
         transform: none;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .sidebar-footer .theme-switch-btn {
+    #app-container:has(#gateway-hub) .sidebar-footer .theme-switch-btn {
         width: 100%;
         min-height: 0;
         justify-content: flex-start;
@@ -5394,23 +5394,23 @@ background:
         white-space: nowrap;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .persistent-id-card {
+    #app-container:has(#gateway-hub) .persistent-id-card {
         width: 100%;
     }
 }
 
 @media (min-width: 861px) and (max-height: 680px) {
-    #app-container:has(#gateway-hub:not(.hidden)) .sidebar-nav {
+    #app-container:has(#gateway-hub) .sidebar-nav {
         gap: clamp(10px, 1.5vh, 16px);
         padding-block: clamp(12px, 2vh, 20px);
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .sidebar-clock {
+    #app-container:has(#gateway-hub) .sidebar-clock {
         gap: 6px;
         padding-block: 10px;
     }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .cat-clock-frame {
+    #app-container:has(#gateway-hub) .cat-clock-frame {
         width: min(126px, 28vh);
     }
 }
@@ -5441,7 +5441,7 @@ background:
     .sidebar-clock .clock-digital { font-size: 12px; }
     .sidebar-clock .clock-date { font-size: 9px; text-align: right; }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) {
+    .sidebar-nav:has(+ .app-main #gateway-hub) {
         position: relative;
         display: grid;
         grid-template-columns: auto minmax(0, 1fr);
@@ -5450,14 +5450,14 @@ background:
         grid-template-rows: auto auto auto;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-brand {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-brand {
         grid-column: 1;
         grid-row: 1;
         max-width: 220px;
         margin: 0;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-clock {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-clock {
         position: static;
         grid-column: 2;
         grid-row: 1;
@@ -5466,7 +5466,7 @@ background:
         box-sizing: border-box;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-links {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-links {
         grid-column: 1 / -1;
         grid-row: 2;
         display: flex;
@@ -5474,7 +5474,7 @@ background:
         justify-content: center;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-footer {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-footer {
         position: static;
         grid-column: 1 / -1;
         grid-row: 3;
@@ -5493,7 +5493,7 @@ background:
         transform: none;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-footer .theme-switch-btn {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-footer .theme-switch-btn {
         width: auto;
         min-height: 38px;
         justify-content: center;
@@ -5501,7 +5501,7 @@ background:
         white-space: nowrap;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .persistent-id-card {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .persistent-id-card {
         display: none;
     }
 }
@@ -5521,68 +5521,68 @@ background:
 }
 
 @media (max-width: 360px) {
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) {
+    .sidebar-nav:has(+ .app-main #gateway-hub) {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-brand,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-clock {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-brand,
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-clock {
         grid-column: 1;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-brand {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-brand {
         grid-row: 1;
         max-width: none;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-clock {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-clock {
         grid-row: 2;
         justify-self: start;
         width: min(170px, 100%);
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-links {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-links {
         grid-row: 3;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-clock .clock-digital {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-clock .clock-digital {
         font-size: 9px;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-clock .clock-date {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-clock .clock-date {
         text-align: left;
     }
 
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-footer {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-footer {
         grid-row: 4;
     }
 }
 
-#app-container:has(#gateway-hub:not(.hidden)) .sidebar-links .sidebar-link:nth-child(1) {
+#app-container:has(#gateway-hub) .sidebar-links .sidebar-link:nth-child(1) {
     --nav-frame-color: var(--neon-blue);
     border-color: color-mix(in srgb, var(--nav-frame-color) 42%, transparent);
     border-radius: 12px 4px 12px 4px;
     box-shadow: 0 0 12px color-mix(in srgb, var(--nav-frame-color) 10%, transparent);
 }
 
-#app-container:has(#gateway-hub:not(.hidden)) .sidebar-links .sidebar-link:nth-child(2) {
+#app-container:has(#gateway-hub) .sidebar-links .sidebar-link:nth-child(2) {
     --nav-frame-color: var(--accent-pink);
     border-color: color-mix(in srgb, var(--nav-frame-color) 42%, transparent);
     border-radius: 15px;
     box-shadow: 0 0 12px color-mix(in srgb, var(--nav-frame-color) 10%, transparent);
 }
 
-#app-container:has(#gateway-hub:not(.hidden)) .sidebar-links .sidebar-link:nth-child(3) {
+#app-container:has(#gateway-hub) .sidebar-links .sidebar-link:nth-child(3) {
     --nav-frame-color: var(--neon-yellow);
     border-color: color-mix(in srgb, var(--nav-frame-color) 42%, transparent);
     border-radius: 4px 12px 4px 12px;
     box-shadow: 0 0 12px color-mix(in srgb, var(--nav-frame-color) 10%, transparent);
 }
 
-#app-container:has(#gateway-hub:not(.hidden)) .sidebar-links .sidebar-link:nth-child(1):hover,
-#app-container:has(#gateway-hub:not(.hidden)) .sidebar-links .sidebar-link:nth-child(2):hover,
-#app-container:has(#gateway-hub:not(.hidden)) .sidebar-links .sidebar-link:nth-child(3):hover {
+#app-container:has(#gateway-hub) .sidebar-links .sidebar-link:nth-child(1):hover,
+#app-container:has(#gateway-hub) .sidebar-links .sidebar-link:nth-child(2):hover,
+#app-container:has(#gateway-hub) .sidebar-links .sidebar-link:nth-child(3):hover {
     border-color: color-mix(in srgb, var(--nav-frame-color) 72%, white);
     box-shadow: 0 0 16px color-mix(in srgb, var(--nav-frame-color) 24%, transparent);
 }
@@ -5650,6 +5650,11 @@ body.welcome-focus-mode #welcome-modal .welcome-card::after {
     right: 10px;
     bottom: 10px;
     border-width: 0 1px 1px 0;
+}
+
+#panel-about .cyber-glass-box::before,
+#panel-about .cyber-glass-box::after {
+    display: none;
 }
 
 .panel-inner-scroll {
@@ -5789,17 +5794,6 @@ body.welcome-focus-mode #welcome-modal .welcome-card::after {
     padding-inline-start: 4px;
 }
 
-.future-list-stack::before {
-    position: absolute;
-    top: 24px;
-    bottom: 24px;
-    inset-inline-start: 22px;
-    width: 1px;
-    background: linear-gradient(var(--neon-yellow), var(--accent-pink), transparent);
-    box-shadow: 0 0 12px var(--pink-glow);
-    content: "";
-}
-
 .future-row {
     position: relative;
     min-height: 84px;
@@ -5910,7 +5904,6 @@ body.welcome-focus-mode #welcome-modal .welcome-card::after {
         height: 32px;
     }
 
-    .future-list-stack::before { inset-inline-start: 18px; }
     .contact-link-card { gap: 12px; padding: 15px; }
 }
 
@@ -6283,7 +6276,7 @@ body.welcome-focus-mode .welcome-card::after {
     }
 
     .sidebar-nav,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) {
+    .sidebar-nav:has(+ .app-main #gateway-hub) {
         display: grid;
         width: 100%;
         grid-template-columns: minmax(0, 1fr) auto;
@@ -6296,7 +6289,7 @@ body.welcome-focus-mode .welcome-card::after {
     }
 
     .sidebar-brand,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-brand {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-brand {
         grid-column: 1;
         grid-row: 1;
         max-width: none;
@@ -6305,7 +6298,7 @@ body.welcome-focus-mode .welcome-card::after {
     }
 
     .sidebar-nav .saturn-widget,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .saturn-widget {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .saturn-widget {
         grid-column: 2;
         grid-row: 1;
         justify-self: end;
@@ -6320,7 +6313,7 @@ body.welcome-focus-mode .welcome-card::after {
     .sidebar-nav .saturn-widget-caption { font-size: 7px; }
 
     .sidebar-links,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-links {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-links {
         position: fixed;
         z-index: 19;
         top: auto;
@@ -6340,7 +6333,7 @@ body.welcome-focus-mode .welcome-card::after {
     }
 
     .sidebar-links .sidebar-link,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-links .sidebar-link {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-links .sidebar-link {
         flex: 1 1 0;
         justify-content: center;
         min-width: 0;
@@ -6362,7 +6355,7 @@ body.welcome-focus-mode .welcome-card::after {
     }
 
     .sidebar-footer,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-footer {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-footer {
         position: static;
         grid-column: 1 / -1;
         grid-row: 2;
@@ -6382,7 +6375,7 @@ body.welcome-focus-mode .welcome-card::after {
     }
 
     .sidebar-footer .theme-switch-btn,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .sidebar-footer .theme-switch-btn {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .sidebar-footer .theme-switch-btn {
         flex: 1 1 0;
         justify-content: center;
         min-width: 0;
@@ -6409,7 +6402,7 @@ body.welcome-focus-mode .welcome-card::after {
     .sidebar-footer .theme-swatches i { width: 7px; height: 7px; }
 
     .persistent-id-card,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .persistent-id-card {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .persistent-id-card {
         display: none;
     }
 
@@ -6418,7 +6411,7 @@ body.welcome-focus-mode .welcome-card::after {
     .deck-nav-bar { margin-bottom: 12px; }
     .panel-inner-scroll { max-height: none; overflow: visible; }
 
-    #app-container:has(#gateway-hub:not(.hidden)) .hub-wrapper {
+    #app-container:has(#gateway-hub) .hub-wrapper {
         min-height: calc(100svh - 260px);
         padding: 8px 0 14px;
     }
@@ -6434,12 +6427,12 @@ body.welcome-focus-mode .welcome-card::after {
 
 @media (max-width: 360px) {
     .sidebar-nav,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) {
+    .sidebar-nav:has(+ .app-main #gateway-hub) {
         padding-inline-end: 52px;
     }
 
     .sidebar-nav .saturn-widget,
-    .sidebar-nav:has(+ .app-main #gateway-hub:not(.hidden)) .saturn-widget {
+    .sidebar-nav:has(+ .app-main #gateway-hub) .saturn-widget {
         width: min(112px, 36vw);
     }
 }
